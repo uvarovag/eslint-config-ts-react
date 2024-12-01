@@ -64,6 +64,8 @@ module.exports = {
                 // Пример: export default () => <div>Hello!</div>;
             },
         ],
+        // Отключает правило, требующее использовать default export в файлах с единственным экспортом
+        'import/prefer-default-export': 'off',
     },
     // Специальные настройки для определенных файлов
     overrides: [
