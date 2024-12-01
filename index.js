@@ -6,6 +6,7 @@ module.exports = {
     },
     // Расширяет базовые конфигурации и плагины
     extends: [
+        '@feature-sliced', // Правила FSD
         'airbnb', // Основные правила Airbnb для JavaScript
         'airbnb/hooks', // Дополнительные правила для React Hooks
         'plugin:@typescript-eslint/recommended', // Рекомендованные правила для TypeScript
@@ -38,19 +39,6 @@ module.exports = {
             },
             typescript: {}, // Включает поддержку TypeScript для резолвинга импортов
         },
-        // FSD Определение слоёв и их паттернов
-        'boundaries/elements': [
-            { type: 'app', pattern: 'src/app/**/*' },
-            { type: 'pages', pattern: 'src/pages/**/*' },
-            { type: 'widgets', pattern: 'src/widgets/**/*' },
-            { type: 'features', pattern: 'src/features/**/*' },
-            { type: 'entities', pattern: 'src/entities/**/*' },
-            { type: 'shared', pattern: 'src/shared/**/*' },
-            { type: 'widgets/*', pattern: 'src/widgets/**/*' },
-            { type: 'features/*', pattern: 'src/features/**/*' },
-            { type: 'entities/*', pattern: 'src/entities/**/*' },
-            { type: 'pages/*', pattern: 'src/pages/**/*' },
-        ],
     },
     // Настройки правил ESLint
     rules: {
@@ -82,27 +70,6 @@ module.exports = {
         'import/prefer-default-export': 'off',
         // Запрет на использование абсолютных путей вместо алиасов
         'import/no-absolute-path': 'error',
-        // FSD Запрет на импорты между слайсами
-        'boundaries/element-types': [
-            'error',
-            {
-                default: 'disallow',
-                rules: [
-                    // FSD Разрешённые связи между слоями
-                    { from: 'app', allow: ['app', 'pages', 'widgets', 'features', 'entities', 'shared'] },
-                    { from: 'pages', allow: ['widgets', 'features', 'entities', 'shared'] },
-                    { from: 'widgets', allow: ['features', 'entities', 'shared'] },
-                    { from: 'features', allow: ['entities', 'shared'] },
-                    { from: 'entities', allow: ['shared'] },
-                    { from: 'shared', allow: ['app', 'pages', 'widgets', 'features', 'entities', 'shared'] },
-                    // FSD Запрет импорта между слайсами одного уровня
-                    { from: 'widgets/*', disallow: ['widgets/*'] },
-                    { from: 'features/*', disallow: ['features/*'] },
-                    { from: 'entities/*', disallow: ['entities/*'] },
-                    { from: 'pages/*', disallow: ['pages/*'] },
-                ],
-            },
-        ],
     },
     // Специальные настройки для определенных файлов
     overrides: [
