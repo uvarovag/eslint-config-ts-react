@@ -4,12 +4,19 @@
     "main": "index.js",
     "scripts": {
         "login": "npm login",
-        "publish": "npm publish --access public"
+        "publish": "npm publish --access public",
+        "fix": "npm pkg fix",
+        "format": "prettier --write '**/*.{ts,tsx,js,json,css,html,md}' && eslint '**/*.{ts,tsx}' --fix"
     },
     "keywords": [],
     "author": "uvarovag",
     "license": "ISC",
     "description": "eslint-config-uvarovag",
+    "homepage": "https://github.com/uvarovag/eslint-config-uvarovag/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/uvarovag/eslint-config-uvarovag.git"
+    },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^8.16.0",
         "@typescript-eslint/parser": "^8.16.0",
