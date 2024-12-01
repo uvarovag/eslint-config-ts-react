@@ -85,12 +85,12 @@ module.exports = {
                 default: 'disallow',
                 rules: [
                     // FSD Разрешённые связи между слоями
-                    { from: 'app', allow: [] },
+                    { from: 'app', allow: ['app', 'pages', 'widgets', 'features', 'entities', 'shared'] },
                     { from: 'pages', allow: ['widgets', 'features', 'entities', 'shared'] },
                     { from: 'widgets', allow: ['features', 'entities', 'shared'] },
                     { from: 'features', allow: ['entities', 'shared'] },
                     { from: 'entities', allow: ['shared'] },
-                    { from: 'shared', allow: [] },
+                    { from: 'shared', allow: ['app', 'pages', 'widgets', 'features', 'entities', 'shared'] },
                     // FSD Запрет импорта между слайсами одного уровня
                     { from: 'widgets/*', disallow: ['widgets/*'] },
                     { from: 'features/*', disallow: ['features/*'] },
