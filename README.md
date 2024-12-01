@@ -21,6 +21,7 @@ npm install --save-dev @uvarovag/eslint-config-ts-react eslint eslint-config-air
 ```
 
 ### Step 2: Run ESLint
+
 ```bash
 npx eslint '**/*.{ts,tsx}' --fix
 ```

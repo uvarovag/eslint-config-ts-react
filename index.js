@@ -55,6 +55,15 @@ module.exports = {
         ],
         // Отключает правило, требующее импортировать React в каждом файле JSX (не нужно в React 17+)
         'react/react-in-jsx-scope': 'off',
+        'react/function-component-definition': [
+            'error', // Устанавливаем уровень правила как "ошибка" (можно также использовать "warn" или "off")
+            {
+                namedComponents: 'arrow-function', // Указывает, что именованные компоненты должны быть объявлены с помощью стрелочных функций.
+                // Пример: const MyComponent = () => { return <div>Hello!</div>; };
+                unnamedComponents: 'arrow-function', // Указывает, что анонимные компоненты (например, передаваемые в HOC) также должны быть стрелочными функциями.
+                // Пример: export default () => <div>Hello!</div>;
+            },
+        ],
     },
     // Специальные настройки для определенных файлов
     overrides: [
