@@ -1,13 +1,13 @@
 {
     "name": "eslint-config-uvarovag",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "index.js",
     "scripts": {
         "login": "npm login",
         "publish": "npm publish --access public",
         "fix": "npm pkg fix"
     },
-    "keywords": [],
+    "keywords": ["eslint", "eslint-config", "code-style", "formatting", "shared-config", "coding-standards"],
     "author": "uvarovag",
     "license": "MIT",
     "description": "eslint-config-uvarovag",
