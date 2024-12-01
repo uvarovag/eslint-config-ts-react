@@ -44,7 +44,7 @@ module.exports = {
         'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
         // Игнорирует расширения при импорте файлов
         'import/extensions': [
-            'error', // Ошибка, если расширения указаны
+            'error', // Устанавливаем уровень правила как "ошибка" (можно также использовать "warn" или "off")
             'ignorePackages', // Игнорирует пакеты, установленные в node_modules
             {
                 ts: 'never', // Для файлов `.ts` расширения не требуются
