@@ -1,6 +1,6 @@
 {
     "name": "@uvarovag/eslint-config-ts-react",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "main": "index.js",
     "scripts": {
         "login": "npm login",
