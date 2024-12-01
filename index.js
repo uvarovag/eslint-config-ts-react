@@ -37,6 +37,15 @@ module.exports = {
             },
             typescript: {}, // Включает поддержку TypeScript для резолвинга импортов
         },
+        // FSD Определение слоёв и их паттернов
+        'boundaries/elements': [
+            { type: 'app', pattern: 'src/app/**/*' },
+            { type: 'pages', pattern: 'src/pages/**/*' },
+            { type: 'widgets', pattern: 'src/widgets/**/*' },
+            { type: 'features', pattern: 'src/features/**/*' },
+            { type: 'entities', pattern: 'src/entities/**/*' },
+            { type: 'shared', pattern: 'src/shared/**/*' },
+        ],
     },
     // Настройки правил ESLint
     rules: {
@@ -66,6 +75,29 @@ module.exports = {
         ],
         // Отключает правило, требующее использовать default export в файлах с единственным экспортом
         'import/prefer-default-export': 'off',
+        // Запрет на использование абсолютных путей вместо алиасов
+        'import/no-absolute-path': 'error',
+        // FSD Запрет на импорты между слайсами
+        'boundaries/element-types': [
+            'error',
+            {
+                default: 'disallow',
+                rules: [
+                    // FSD Разрешённые связи между слоями
+                    { from: 'app', allow: ['pages', 'widgets', 'features', 'entities', 'shared'] },
+                    { from: 'pages', allow: ['widgets', 'features', 'entities', 'shared'] },
+                    { from: 'widgets', allow: ['features', 'entities', 'shared'] },
+                    { from: 'features', allow: ['entities', 'shared'] },
+                    { from: 'entities', allow: ['shared'] },
+                    { from: 'shared', allow: [] },
+                    // FSD Запрет импорта между слайсами одного уровня
+                    { from: 'widgets/*', disallow: ['widgets/*'] },
+                    { from: 'features/*', disallow: ['features/*'] },
+                    { from: 'entities/*', disallow: ['entities/*'] },
+                    { from: 'pages/*', disallow: ['pages/*'] },
+                ],
+            },
+        ],
     },
     // Специальные настройки для определенных файлов
     overrides: [
