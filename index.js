@@ -85,7 +85,7 @@ module.exports = {
                 default: 'disallow',
                 rules: [
                     // FSD Разрешённые связи между слоями
-                    { from: 'app', allow: ['pages', 'widgets', 'features', 'entities', 'shared'] },
+                    { from: 'app', allow: [] },
                     { from: 'pages', allow: ['widgets', 'features', 'entities', 'shared'] },
                     { from: 'widgets', allow: ['features', 'entities', 'shared'] },
                     { from: 'features', allow: ['entities', 'shared'] },
