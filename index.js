@@ -40,12 +40,12 @@ module.exports = {
         },
         // FSD Определение слоёв и их паттернов
         'boundaries/elements': [
-            { type: 'app/*', pattern: 'src/app/**/*' },
-            { type: 'pages/*', pattern: 'src/pages/**/*' },
-            { type: 'widgets/*', pattern: 'src/widgets/**/*' },
-            { type: 'features/*', pattern: 'src/features/**/*' },
-            { type: 'entities/*', pattern: 'src/entities/**/*' },
-            { type: 'shared/*', pattern: 'src/shared/**/*' },
+            { type: 'app', pattern: 'src/app/**/*' },
+            { type: 'pages', pattern: 'src/pages/**/*' },
+            { type: 'widgets', pattern: 'src/widgets/**/*' },
+            { type: 'features', pattern: 'src/features/**/*' },
+            { type: 'entities', pattern: 'src/entities/**/*' },
+            { type: 'shared', pattern: 'src/shared/**/*' },
         ],
     },
     // Настройки правил ESLint
@@ -92,10 +92,10 @@ module.exports = {
                     { from: 'entities', allow: ['shared'] },
                     { from: 'shared', allow: ['app', 'pages', 'widgets', 'features', 'entities', 'shared'] },
                     // FSD Запрет импорта между слайсами одного уровня
-                    { from: 'widgets/*', disallow: ['widgets/*'] },
-                    { from: 'features/*', disallow: ['features/*'] },
-                    { from: 'entities/*', disallow: ['entities/*'] },
-                    { from: 'pages/*', disallow: ['pages/*'] },
+                    { from: 'widgets', disallow: ['widgets/*'] },
+                    { from: 'features', disallow: ['features/*'] },
+                    { from: 'entities', disallow: ['entities/*'] },
+                    { from: 'pages', disallow: ['pages/*'] },
                 ],
             },
         ],
