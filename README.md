@@ -28,6 +28,14 @@ npx eslint '**/*.{ts,tsx}' --fix
 
 ## Use Together with Prettier
 
+## Installation
+
+To use this configuration in your project, install the necessary dependencies:
+
+```bash
+npm install --save-dev @uvarovag/prettier-config-ts-react prettier
+```
+
 ### Step 1: Create a .prettierrc File
 
 ```json
