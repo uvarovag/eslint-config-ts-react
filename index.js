@@ -6,7 +6,6 @@ module.exports = {
     },
     // Расширяет базовые конфигурации и плагины
     extends: [
-        '@feature-sliced', // Правила FSD
         'airbnb', // Основные правила Airbnb для JavaScript
         'airbnb/hooks', // Дополнительные правила для React Hooks
         'plugin:@typescript-eslint/recommended', // Рекомендованные правила для TypeScript
