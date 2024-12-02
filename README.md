@@ -25,3 +25,33 @@ npm install --save-dev @uvarovag/eslint-config-ts-react eslint eslint-config-air
 ```bash
 npx eslint '**/*.{ts,tsx}' --fix
 ```
+
+## Use Together with Prettier
+
+### Step 1: Create a .prettierrc File
+
+```json
+"@uvarovag/prettier-config-ts-react"
+```
+
+### Step 2: Format your code
+
+```bash
+npx prettier --write '**/*.{ts,tsx,js,json,css,html,md}'
+```
+
+## Work with VSCode
+
+### Add the following to settings.json in VSCode
+
+```json
+{
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.requireConfig": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit"
+    },
+    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"]
+}
+```
