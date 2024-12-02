@@ -26,7 +26,7 @@ npm install --save-dev @uvarovag/eslint-config-ts-react eslint eslint-config-air
 npx eslint '**/*.{ts,tsx}' --fix
 ```
 
-## Use Together with Prettier
+## Use together with Prettier
 
 ## Installation
 
@@ -48,9 +48,14 @@ npm install --save-dev @uvarovag/prettier-config-ts-react prettier
 npx prettier --write '**/*.{ts,tsx,js,json,css,html,md}'
 ```
 
-## Work with VSCode
+## Use Prettier and ESLint in Visual Studio Code
 
-### Add the following to settings.json in VSCode
+### Step 1: Install Plugins
+
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+
+### Step 2: Add the following to settings.json in VSCode
 
 ```json
 {
