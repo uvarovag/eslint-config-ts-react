@@ -36,7 +36,7 @@ To use this configuration in your project, install the necessary dependencies:
 npm install --save-dev @uvarovag/prettier-config-ts-react prettier
 ```
 
-### Step 1: Create a .prettierrc File
+### Step 1: Create a .prettierrc file
 
 ```json
 "@uvarovag/prettier-config-ts-react"
