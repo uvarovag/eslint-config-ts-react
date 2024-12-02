@@ -69,6 +69,8 @@ module.exports = {
         'import/prefer-default-export': 'off',
         // Запрет на использование абсолютных путей вместо алиасов
         'import/no-absolute-path': 'error',
+        // Отключает запрет на использование проп-спрединга
+        'react/jsx-props-no-spreading': 'off',
     },
     // Специальные настройки для определенных файлов
     overrides: [
