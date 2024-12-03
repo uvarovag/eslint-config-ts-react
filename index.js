@@ -45,7 +45,7 @@ module.exports = {
         'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
         // Игнорирует расширения при импорте файлов
         'import/extensions': [
-            'error', // Устанавливаем уровень правила как "ошибка" (можно также использовать "warn" или "off")
+            'error', // Устанавливает уровень правила как "ошибка" (можно также использовать "warn" или "off")
             'ignorePackages', // Игнорирует пакеты, установленные в node_modules
             {
                 ts: 'never', // Для файлов `.ts` расширения не требуются
@@ -57,7 +57,7 @@ module.exports = {
         // Отключает правило, требующее импортировать React в каждом файле JSX (не нужно в React 17+)
         'react/react-in-jsx-scope': 'off',
         'react/function-component-definition': [
-            'error', // Устанавливаем уровень правила как "ошибка" (можно также использовать "warn" или "off")
+            'error', // Устанавливает уровень правила как "ошибка" (можно также использовать "warn" или "off")
             {
                 namedComponents: 'arrow-function', // Указывает, что именованные компоненты должны быть объявлены с помощью стрелочных функций.
                 // Пример: const MyComponent = () => { return <div>Hello!</div>; };
@@ -71,6 +71,16 @@ module.exports = {
         'import/no-absolute-path': 'error',
         // Отключает запрет на использование проп-спрединга
         'react/jsx-props-no-spreading': 'off',
+        // Сортировка пропсов в компонентах React
+        'react/jsx-sort-props': [
+            'error', // Устанавливает уровень правила как "ошибка" (можно также использовать "warn" или "off")
+            {
+                callbacksLast: true, // Сортировать колбэки (например, onClick, onChange) после остальных пропсов
+                ignoreCase: true, // Игнорировать регистр символов при сортировке
+                shorthandFirst: true, // Короткие пропсы (например, `checked`) идут перед длинными (например, `className="btn"`)
+                reservedFirst: true, // Зарезервированные пропсы (например, `key`, `ref`) отображаются первыми
+            },
+        ],
     },
     // Специальные настройки для определенных файлов
     overrides: [
