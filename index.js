@@ -25,7 +25,6 @@ module.exports = {
     plugins: [
         'react', // Плагин для React
         '@typescript-eslint', // Плагин для TypeScript
-        'boundaries', // Плагин boundaries
         'import', // Плагин для import
     ],
     // Настройки для резолвинга импортов
