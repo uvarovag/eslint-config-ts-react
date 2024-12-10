@@ -1,6 +1,6 @@
 # eslint-config-ts-react
 
-A shared ESLint 9 Flat configuration for TypeScript React projects.
+Shared ESLint 9 Flat configuration for TypeScript React projects.
 
 ## Installation
 

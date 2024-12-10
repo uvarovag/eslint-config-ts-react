@@ -1,6 +1,6 @@
 {
     "name": "@uvarovag/eslint-config-ts-react",
-    "version": "2.0.8",
+    "version": "2.0.9",
     "main": "eslint.config.js",
     "type": "module",
     "scripts": {
@@ -18,14 +18,14 @@
     ],
     "author": "@uvarovag",
     "license": "MIT",
-    "description": "A shared ESLint 9 Flat configuration for TypeScript React projects",
+    "description": "Shared ESLint 9 Flat configuration for TypeScript React projects",
     "homepage": "https://github.com/uvarovag/eslint-config-ts-react/blob/master/README.md",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/uvarovag/eslint-config-ts-react.git"
     },
     "dependencies": {
-        "@uvarovag/eslint-config-ts": "^1.0.13",
+        "@uvarovag/eslint-config-ts": "^1.0.14",
         "eslint-plugin-jsx-a11y": "^6.10.2",
         "eslint-plugin-react": "^7.37.2",
         "eslint-plugin-react-hooks": "^5.1.0"
