@@ -1,23 +1,23 @@
 # eslint-config-ts-react
 
-A shared ESLint configuration for TypeScript and React projects.
+A shared ESLint 9 Flat configuration for TypeScript React projects.
 
 ## Installation
 
 To use this configuration in your project, install the required dependencies:
 
 ```bash
-npm install --save-dev @uvarovag/eslint-config-ts-react eslint eslint-config-airbnb eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-import eslint-plugin-jsx-a11y @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-plugin-prettier eslint-config-prettier
+npm install --save-dev @uvarovag/eslint-config-ts-react eslint@^9.16.0
 ```
 
 ## Usage
 
-### Step 1: Create a `.eslintrc.json` file
+### Step 1: Create a `eslint.config.js` file
 
-```json
-{
-    "extends": "@uvarovag/eslint-config-ts-react"
-}
+```js
+import reactConfig from '@uvarovag/eslint-config-ts-react'
+
+export default [...reactConfig]
 ```
 
 ### Step 2: Run ESLint
