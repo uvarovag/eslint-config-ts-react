@@ -65,6 +65,7 @@ npx prettier --write '**/*.{ts,tsx,js,json,css,html,md}'
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit"
     },
-    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"]
+    "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+    "eslint.experimental.useFlatConfig": true
 }
 ```

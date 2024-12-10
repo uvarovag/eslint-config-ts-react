@@ -1,6 +1,6 @@
 {
     "name": "@uvarovag/eslint-config-ts-react",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "main": "eslint.config.js",
     "type": "module",
     "scripts": {
