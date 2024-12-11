@@ -12,7 +12,7 @@ npm install --save-dev @uvarovag/eslint-config-ts-react eslint@^9.16.0
 
 ## Usage
 
-### Step 1: Create a `eslint.config.js` file
+### Step 1: Create a `eslint.config.mjs` file
 
 ```js
 import reactConfig from '@uvarovag/eslint-config-ts-react'
