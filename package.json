@@ -1,12 +1,12 @@
 {
     "name": "@uvarovag/eslint-config-ts-react",
-    "version": "2.0.12",
+    "version": "2.0.13",
+    "description": "Shared ESLint 9 Flat configuration for TypeScript React projects",
     "main": "eslint.config.js",
     "type": "module",
     "scripts": {
-        "login": "npm login",
-        "publish": "npm publish --access public",
-        "fix": "npm pkg fix && npx prettier --write '**/*.{ts,tsx,js,json,css,html,md}'"
+        "fix": "prettier --write '**/*.{ts,tsx,js,json,css,html,md}' && npm pkg fix",
+        "publish": "npm run fix && npm publish --access public"
     },
     "keywords": [
         "eslint",
@@ -18,20 +18,19 @@
     ],
     "author": "@uvarovag",
     "license": "MIT",
-    "description": "Shared ESLint 9 Flat configuration for TypeScript React projects",
     "homepage": "https://github.com/uvarovag/eslint-config-ts-react/blob/master/README.md",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/uvarovag/eslint-config-ts-react.git"
     },
     "dependencies": {
-        "@uvarovag/eslint-config-ts": "^1.0.16",
+        "@uvarovag/eslint-config-ts": "^1.0.17",
         "eslint-plugin-jsx-a11y": "^6.10.2",
         "eslint-plugin-react": "^7.37.2",
         "eslint-plugin-react-hooks": "^5.1.0"
     },
     "devDependencies": {
-        "@uvarovag/prettier-config": "^1.0.1",
+        "@uvarovag/prettier-config": "^1.0.6",
         "prettier": "^3.4.1"
     },
     "peerDependencies": {
