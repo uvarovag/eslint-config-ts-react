@@ -23,7 +23,7 @@ export default [...reactConfig]
 ### Step 2: Run ESLint
 
 ```bash
-npx eslint '**/*.{ts,tsx}' --fix
+eslint '**/*.{js,jsx,ts,tsx}' --fix
 ```
 
 ## Use together with Prettier
@@ -45,7 +45,7 @@ npm install --save-dev @uvarovag/prettier-config prettier
 ### Step 2: Format your code
 
 ```bash
-npx prettier --write '**/*.{ts,tsx,js,json,css,html,md}'
+prettier --write '**/*.{ts,tsx,js,json,css,html,md}'
 ```
 
 ## Use Prettier and ESLint in Visual Studio Code
